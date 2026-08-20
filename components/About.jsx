@@ -3,95 +3,88 @@ const contactItems = [
     label: "Email",
     value: "johneltongeromo@gmail.com",
     href: "mailto:johneltongeromo@gmail.com",
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
-    ),
+    icon: "✉",
   },
   {
     label: "Phone",
     value: "+639933023621",
     href: "tel:+639933023621",
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
-      </svg>
-    ),
+    icon: "📞",
   },
   {
     label: "GitHub",
     value: "jjnix-john",
     href: "https://github.com/jjnix-john",
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
-      </svg>
-    ),
+    icon: "<>",
   },
   {
     label: "LinkedIn",
     value: "john-elton-d-geromo",
     href: "https://www.linkedin.com/in/john-elton-d-geromo-726574406",
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 2a2 2 0 110 4 2 2 0 010-4z" />
-      </svg>
-    ),
+    icon: "in",
   },
 ];
 
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-white">
-      <div className="max-w-5xl mx-auto px-6">
-        <p className="text-sm font-semibold tracking-widest uppercase text-sky-500 mb-3">
-          About
+    <section id="about" className="px-4 py-24 sm:px-6 sm:py-32 bg-transparent transition-colors duration-300">
+      <div className="mx-auto max-w-6xl">
+        <p className="mb-3 inline-flex rounded-full border border-sky-400/30 bg-sky-500/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.35em] text-sky-400 dark:text-sky-300">
+          About me
         </p>
-        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-stone-900 mb-12">
-          Who I Am
+        <h2 className="mb-12 text-4xl font-black tracking-[-0.08em] text-text sm:text-5xl lg:text-6xl">
+          Who I am
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          <div className="text-stone-600 leading-relaxed space-y-4">
-            <p>
-              I&apos;m a student and full-stack developer based in{" "}
-              <strong className="text-stone-900">Mandaue City, Philippines</strong>,
-              passionate about building modern web applications, automation tools,
-              and exploring AI/software systems. I enjoy working across the stack —
-              from crafting polished UIs with <strong className="text-stone-900">React</strong> and{" "}
-              <strong className="text-stone-900">Tailwind</strong> to wiring up backends
-              with <strong className="text-stone-900">Node.js</strong>,{" "}
-              <strong className="text-stone-900">Supabase</strong>, and{" "}
-              <strong className="text-stone-900">Python</strong>.
-            </p>
-            <p>
-              Beyond web dev, I dive into{" "}
-              <strong className="text-stone-900">academic research</strong> on AI-powered
-              developer tooling and <strong className="text-stone-900">network programming</strong>{" "}
-              (TCP/UDP/HTTP). I&apos;m driven by curiosity about how systems work under the
-              hood, and I love turning ideas into practical, working software.
-            </p>
+        <div className="grid items-start gap-8 md:grid-cols-2 lg:gap-12">
+          <div className="glass-panel animate-slide-in-left rounded-[2rem] border border-border p-6 sm:p-8">
+            <div className="space-y-6 text-base font-medium leading-relaxed text-text/90 sm:text-lg">
+              <p>
+                I&apos;m a <span className="font-black text-sky-400 dark:text-sky-300">student & full-stack developer</span> based in <span className="font-black text-text">Mandaue City, Philippines</span>, passionate about building modern web applications, automation tools, and exploring AI/software systems. I enjoy working across the stack — from crafting polished UIs with React and Tailwind to wiring up backends with Node.js, Supabase, and Python.
+              </p>
+              <p>
+                Beyond web development, I dive into academic research on AI-powered developer tooling and networking systems. I&apos;m driven by curiosity about how systems work under the hood, and I love turning ideas into practical, working software.
+              </p>
+            </div>
+
+            <div className="mt-8 space-y-4">
+              <p className="text-[10px] font-black uppercase tracking-[0.32em] text-muted">Main focus areas</p>
+              <ul className="space-y-3 text-sm font-semibold text-text/95">
+                {[
+                  "Full Stack Development (React, Next.js, Node.js)",
+                  "Software Architecture & Design Patterns",
+                  "AI/LLM Integration & Automation",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 rounded-xl border border-border bg-surface-secondary/40 px-3 py-2">
+                    <span className="mt-0.5 text-base text-sky-400 dark:text-sky-300">→</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          <div className="space-y-3">
-            {contactItems.map((item) => (
+          <div className="space-y-4 animate-slide-in-right">
+            <p className="text-[10px] font-black uppercase tracking-[0.32em] text-rose-400 dark:text-rose-300">Get in touch</p>
+            {contactItems.map((item, i) => (
               <a
                 key={item.label}
                 href={item.href}
                 target={item.href.startsWith("http") ? "_blank" : undefined}
                 rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="flex items-center gap-4 p-4 bg-stone-50 border border-stone-200 rounded-xl hover:border-sky-300 hover:bg-sky-50/50 transition-all group"
+                className="group flex items-center gap-4 rounded-[1.5rem] border border-border bg-surface-secondary/40 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:bg-surface-secondary/60"
+                style={{ animationDelay: `${i * 0.1}s` }}
               >
-                <span className="w-10 h-10 rounded-lg bg-white border border-stone-200 flex items-center justify-center text-sky-500 group-hover:border-sky-300 group-hover:bg-sky-50 transition-all shrink-0">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-sky-400/30 bg-sky-500/10 text-lg font-black text-sky-400 dark:text-sky-300 transition-transform duration-300 group-hover:rotate-12">
                   {item.icon}
                 </span>
-                <div className="min-w-0">
-                  <div className="text-xs text-stone-400 font-medium">{item.label}</div>
-                  <div className="text-sm font-semibold text-stone-900 truncate">
+                <div className="min-w-0 flex-1">
+                  <div className="text-[10px] font-black uppercase tracking-[0.28em] text-muted">{item.label}</div>
+                  <div className="truncate text-sm font-bold text-text transition-colors duration-300 group-hover:text-primary sm:text-base">
                     {item.value}
                   </div>
                 </div>
+                <span className="text-xl text-text/60 transition-transform duration-300 group-hover:translate-x-1">→</span>
               </a>
             ))}
           </div>

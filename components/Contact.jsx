@@ -3,75 +3,84 @@ const channels = [
     label: "Email",
     value: "johneltongeromo@gmail.com",
     href: "mailto:johneltongeromo@gmail.com",
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
-    ),
+    icon: "✉",
   },
   {
     label: "GitHub",
     value: "jjnix-john",
     href: "https://github.com/jjnix-john",
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
-      </svg>
-    ),
+    icon: "<>",
   },
   {
     label: "LinkedIn",
     value: "john-elton-d-geromo",
     href: "https://www.linkedin.com/in/john-elton-d-geromo-726574406",
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 2a2 2 0 110 4 2 2 0 010-4z" />
-      </svg>
-    ),
+    icon: "in",
   },
   {
     label: "Phone",
     value: "+639933023621",
     href: "tel:+639933023621",
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
-      </svg>
-    ),
+    icon: "📞",
   },
 ];
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 bg-stone-50">
-      <div className="max-w-5xl mx-auto px-6 text-center">
-        <p className="text-sm font-semibold tracking-widest uppercase text-sky-500 mb-3">
-          Contact
-        </p>
-        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-stone-900 mb-4">
-          Get In Touch
-        </h2>
-        <p className="text-stone-500 max-w-md mx-auto mb-10">
-          Have a project, research idea, or just want to say hi? I&apos;m always open to
-          new opportunities and conversations.
-        </p>
+    <section
+      id="contact"
+      className="px-4 sm:px-6 py-24 sm:py-32 border-t border-border bg-transparent transition-colors duration-300"
+    >
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-12 text-center space-y-4">
+          <p className="inline-flex rounded-full border border-sky-400/30 bg-sky-500/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.35em] text-sky-400 dark:text-sky-300">
+            ↓ Contact Me ↓
+          </p>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-text">
+            LET&apos;S COLLABORATE
+          </h2>
+          <p className="mx-auto max-w-xl text-base sm:text-lg font-medium text-muted">
+            Have a project, research idea, or just want to say hi? I&apos;m always open to new opportunities and conversations.
+          </p>
+        </div>
 
-        <div className="flex flex-wrap justify-center gap-4 max-w-2xl mx-auto">
-          {channels.map((ch) => (
+        <div className="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2">
+          {channels.map((ch, i) => (
             <a
               key={ch.label}
               href={ch.href}
               target={ch.href.startsWith("http") ? "_blank" : undefined}
               rel={ch.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="flex items-center gap-3 px-5 py-4 bg-white border border-stone-200 rounded-xl hover:border-sky-300 hover:shadow-md hover:-translate-y-0.5 transition-all min-w-[180px] flex-1"
+              className="glass-panel group flex flex-col sm:flex-row items-center gap-4 rounded-[2rem] border border-border bg-surface-secondary/40 p-6 text-center sm:text-left transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_15px_35px_rgba(56,189,248,0.12)] animate-fade-up"
+              style={{ animationDelay: `${i * 0.1}s` }}
             >
-              <span className="text-sky-500 shrink-0">{ch.icon}</span>
-              <div className="text-left">
-                <div className="text-xs text-stone-400 font-medium">{ch.label}</div>
-                <div className="text-sm font-semibold text-stone-900">{ch.value}</div>
+              <span className="flex h-14 w-14 sm:h-16 sm:w-16 shrink-0 items-center justify-center rounded-2xl border border-sky-400/30 bg-sky-500/10 text-sky-400 dark:text-sky-300 text-2xl font-black transition-transform duration-300 group-hover:rotate-12">
+                {ch.icon}
+              </span>
+              <div className="min-w-0 flex-1">
+                <div className="text-xs font-black uppercase tracking-widest text-muted">{ch.label}</div>
+                <div className="text-sm sm:text-base font-bold text-text truncate transition-colors duration-300 group-hover:text-primary">
+                  {ch.value}
+                </div>
               </div>
+              <span className="ml-auto text-xl text-muted transition-transform duration-300 group-hover:translate-x-1.5 hidden sm:inline">
+                →
+              </span>
             </a>
           ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="mt-16 text-center space-y-6">
+          <p className="font-black text-text text-lg sm:text-xl uppercase tracking-wider">
+            or send me an email directly
+          </p>
+          <a
+            href="mailto:johneltongeromo@gmail.com"
+            className="inline-block rounded-2xl border border-sky-400/40 bg-gradient-to-r from-sky-400 to-cyan-300 px-8 sm:px-12 py-5 text-center font-black uppercase tracking-wider text-slate-950 shadow-[0_12px_30px_rgba(56,189,248,0.25)] transition-transform duration-300 hover:-translate-y-1 hover:brightness-105 active:translate-y-0 text-lg"
+          >
+            SEND EMAIL
+          </a>
         </div>
       </div>
     </section>
