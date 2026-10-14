@@ -1,8 +1,8 @@
 const channels = [
   {
     label: "Email",
-    value: "johneltongeromo@gmail.com",
-    href: "mailto:johneltongeromo@gmail.com",
+    value: "johneltongeromo438@gmail.com",
+    href: "mailto:johneltongeromo438@gmail.com",
     icon: "✉",
   },
   {
@@ -76,7 +76,7 @@ export default function Contact() {
             or send me an email directly
           </p>
           <a
-            href="mailto:johneltongeromo@gmail.com"
+            href="mailto:johneltongeromo438@gmail.com"
             className="inline-block rounded-2xl border border-sky-400/40 bg-gradient-to-r from-sky-400 to-cyan-300 px-8 sm:px-12 py-5 text-center font-black uppercase tracking-wider text-slate-950 shadow-[0_12px_30px_rgba(56,189,248,0.25)] transition-transform duration-300 hover:-translate-y-1 hover:brightness-105 active:translate-y-0 text-lg"
           >
             SEND EMAIL

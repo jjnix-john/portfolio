@@ -1,6 +1,10 @@
+import { useState } from "react";
+
 const resumeUrl = "/files/Geromo_John_Elton_D_FlowCV_Resume_2026-08-02.pdf";
 
 export default function Hero() {
+  const [activeTab, setActiveTab] = useState("interests");
+
   return (
     <section
       id="hero"
@@ -41,7 +45,7 @@ export default function Hero() {
             {/* Subheading & Technical tags */}
             <div className="space-y-6 animate-fade-up stagger-1">
               <p className="max-w-xl text-lg font-bold leading-relaxed text-muted sm:text-xl font-mono">
-                &gt;_ Crafting highly efficient web applications, automated scraper pipelines, and scalable developer tools.
+                &gt;_ Full Stack Developer building scalable web applications with React, Next.js, Node.js, and Supabase. Passionate about AI integration and robust backend systems in Java, C++, Python & PHP.
               </p>
 
               <div className="flex flex-wrap gap-2">
@@ -49,7 +53,10 @@ export default function Hero() {
                   📍 Mandaue City, PH
                 </span>
                 <span className="rounded border-2 border-border bg-surface px-3 py-1 text-xs font-bold uppercase tracking-wider text-text shadow-[2px_2px_0px_var(--border-color)]">
-                  🎓 Student & Innovator
+                  🎓 BSIT @ UCLM
+                </span>
+                <span className="rounded border-2 border-border bg-surface px-3 py-1 text-xs font-bold uppercase tracking-wider text-text shadow-[2px_2px_0px_var(--border-color)]">
+                  🏆 IBM-Coached Finalist
                 </span>
               </div>
             </div>
@@ -75,15 +82,20 @@ export default function Hero() {
             {/* Tech Stack Pills (Styled like Chrome Badge Stickers) */}
             <div className="pt-4 animate-fade-up stagger-3">
               <p className="mb-3 font-mono text-xs font-black uppercase tracking-widest text-text">
-                [Tech Stack]
+                [Core Tech Stack & Languages]
               </p>
-              <div className="flex flex-wrap gap-2.5">
+              <div className="flex flex-wrap gap-2">
                 {[
-                  { name: "React", bg: "bg-neo-teal" },
+                  { name: "React", bg: "bg-neo-teal text-black" },
                   { name: "Next.js", bg: "bg-neo-lilac text-white" },
-                  { name: "JavaScript", bg: "bg-neo-yellow" },
-                  { name: "Tailwind CSS", bg: "bg-neo-pink" },
-                  { name: "Node.js", bg: "bg-neo-green" },
+                  { name: "Java", bg: "bg-neo-orange text-white" },
+                  { name: "C++", bg: "bg-neo-yellow text-black" },
+                  { name: "Python", bg: "bg-neo-green text-black" },
+                  { name: "PHP", bg: "bg-neo-pink text-black" },
+                  { name: "Node.js", bg: "bg-neo-teal text-black" },
+                  { name: "Supabase", bg: "bg-neo-green text-black" },
+                  { name: "SQL", bg: "bg-neo-yellow text-black" },
+                  { name: "Tailwind CSS", bg: "bg-neo-pink text-black" },
                 ].map((tech) => (
                   <span
                     key={tech.name}
@@ -116,27 +128,105 @@ export default function Hero() {
               </div>
               
               {/* Terminal Code Simulator */}
-              <div className="font-mono text-xs leading-relaxed space-y-2">
-                <div className="text-muted">$ whoami</div>
-                <div className="text-neo-teal font-bold">&gt; John Elton Geromo</div>
-                
-                <div className="text-muted">$ current_role</div>
-                <div className="text-neo-orange font-bold">&gt; Full-Stack Software Developer</div>
-                
-                <div className="text-muted">$ check_status --verbose</div>
-                <div className="bg-surface-secondary/70 p-2.5 rounded border border-dashed border-border text-[11px] space-y-1">
-                  <p className="text-neo-green font-bold">● Status: Active & Available</p>
-                  <p className="text-text">● Focus: Fast, clean, optimized code</p>
-                  <p className="text-text">● Environment: Production Ready</p>
+              <div className="font-mono text-xs leading-relaxed space-y-3">
+                <div>
+                  <div className="text-muted">$ whoami</div>
+                  <div className="text-neo-teal font-bold">&gt; John Elton Geromo (Full Stack Developer)</div>
                 </div>
                 
-                <div className="text-muted">$ list_interests</div>
-                <pre className="text-[10px] text-neo-lilac font-bold leading-none">
-{`   _____  _____  ______ 
-  /  _  \\/  _  \\/  ____/ 
-  /  / \\  /  / \\  \\___ \\  
- /__/  \\_/__/  \\_/____/  `}
-                </pre>
+                <div>
+                  <div className="text-muted">$ check_status --verbose</div>
+                  <div className="bg-surface-secondary/70 p-2.5 rounded border border-dashed border-border text-[11px] space-y-1">
+                    <p className="text-neo-green font-bold">● Status: Active & Available for Roles</p>
+                    <p className="text-text">● Co-Engineer: Tuon.net (AI Study App)</p>
+                    <p className="text-text">● Latest Deploy: BoxedLinks (Cloud Sharing)</p>
+                  </div>
+                </div>
+
+                {/* Remade Interactive Section: Replaced broken ASCII art */}
+                <div>
+                  <div className="flex items-center justify-between text-muted mb-1.5">
+                    <span>$ run query_{activeTab}</span>
+                    <span className="text-[10px] text-neo-teal font-mono">[interactive]</span>
+                  </div>
+
+                  {activeTab === "interests" && (
+                    <div className="bg-surface-secondary/70 p-2.5 rounded border border-dashed border-border text-[11px] space-y-1.5 animate-fade-in">
+                      <div className="flex items-start gap-2">
+                        <span className="text-neo-teal font-bold">▸</span>
+                        <span className="text-text"><strong className="text-neo-teal">Full-Stack Web:</strong> React, Next.js, Node.js & Supabase</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-neo-orange font-bold">▸</span>
+                        <span className="text-text"><strong className="text-neo-orange">AI Integration:</strong> LLM APIs & automated quizzes (Tuon.net)</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-neo-lilac font-bold">▸</span>
+                        <span className="text-text"><strong className="text-neo-lilac">Systems & Core:</strong> Java (TCP/UDP), C++, Python, PHP & SQL</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-neo-green font-bold">▸</span>
+                        <span className="text-text"><strong className="text-neo-green">Cloud Architecture:</strong> Drive-style storage (BoxedLinks)</span>
+                      </div>
+                    </div>
+                  )}
+
+                  {activeTab === "stack" && (
+                    <div className="bg-surface-secondary/70 p-2.5 rounded border border-dashed border-border text-[11px] space-y-1 animate-fade-in">
+                      <p className="text-text"><span className="text-neo-yellow font-bold">LANGS:</span> JS, Java, C++, Python, PHP, SQL, C</p>
+                      <p className="text-text"><span className="text-neo-teal font-bold">WEB:</span> React, Next.js, Node.js, Tailwind CSS</p>
+                      <p className="text-text"><span className="text-neo-orange font-bold">DATA:</span> Supabase, PostgreSQL, REST APIs</p>
+                      <p className="text-text"><span className="text-neo-lilac font-bold">TOOLS:</span> Git/GitHub, Vercel, Selenium, Claude</p>
+                    </div>
+                  )}
+
+                  {activeTab === "awards" && (
+                    <div className="bg-surface-secondary/70 p-2.5 rounded border border-dashed border-border text-[11px] space-y-1.5 animate-fade-in">
+                      <p className="text-neo-yellow font-bold">★ Finalist, IBPAP Hackathon (IBM-Coached)</p>
+                      <p className="text-neo-orange font-bold">★ 3rd Place, CCS Days Hackathon 2025</p>
+                      <p className="text-neo-teal font-bold">★ TOPCIT Level 2 ICT Certified</p>
+                      <p className="text-neo-green font-bold">★ EF SET C1 Advanced English Certificate</p>
+                    </div>
+                  )}
+
+                  {/* Interactive Terminal Action Tabs */}
+                  <div className="mt-2.5 flex items-center gap-1.5 pt-1">
+                    <span className="text-[10px] text-muted font-bold">CMD:</span>
+                    <button
+                      type="button"
+                      onClick={() => setActiveTab("interests")}
+                      className={`rounded px-2 py-0.5 text-[10px] font-mono font-bold border transition-all ${
+                        activeTab === "interests"
+                          ? "bg-neo-teal text-black border-border shadow-[1px_1px_0px_var(--border-color)]"
+                          : "bg-surface-secondary text-text border-border hover:bg-surface"
+                      }`}
+                    >
+                      $ interests
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setActiveTab("stack")}
+                      className={`rounded px-2 py-0.5 text-[10px] font-mono font-bold border transition-all ${
+                        activeTab === "stack"
+                          ? "bg-neo-yellow text-black border-border shadow-[1px_1px_0px_var(--border-color)]"
+                          : "bg-surface-secondary text-text border-border hover:bg-surface"
+                      }`}
+                    >
+                      $ stack
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setActiveTab("awards")}
+                      className={`rounded px-2 py-0.5 text-[10px] font-mono font-bold border transition-all ${
+                        activeTab === "awards"
+                          ? "bg-neo-orange text-white border-border shadow-[1px_1px_0px_var(--border-color)]"
+                          : "bg-surface-secondary text-text border-border hover:bg-surface"
+                      }`}
+                    >
+                      $ awards
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -146,15 +236,15 @@ export default function Hero() {
         <div className="mt-16 grid grid-cols-2 gap-4 md:grid-cols-4 animate-fade-up stagger-5">
           {[
             { label: "Projects Built", value: "10+", color: "text-neo-orange" },
-            { label: "Years Coding", value: "3+", color: "text-neo-teal" },
-            { label: "Languages", value: "5+", color: "text-neo-lilac" },
-            { label: "Client Satisfaction", value: "Curious", color: "text-neo-green" },
+            { label: "Core Languages", value: "Java / C++ / Python", color: "text-neo-teal" },
+            { label: "Hackathon Finalist", value: "IBM-Coached", color: "text-neo-lilac" },
+            { label: "ICT Certified", value: "TOPCIT L2", color: "text-neo-green" },
           ].map((stat, i) => (
             <div
               key={i}
               className="glass-panel bg-surface p-5 border-2 border-border shadow-neo hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_var(--border-color)] transition-all"
             >
-              <p className={`text-3xl font-black font-mono tracking-tight ${stat.color}`}>
+              <p className={`text-2xl sm:text-3xl font-black font-mono tracking-tight ${stat.color}`}>
                 {stat.value}
               </p>
               <p className="mt-2 text-[10px] font-mono font-black uppercase tracking-widest text-text">

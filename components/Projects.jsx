@@ -2,47 +2,56 @@ import ProjectCard from "./ProjectCard";
 
 const projects = [
   {
-    title: "BackTrack",
-    tag: "Research",
+    title: "BoxedLinks",
+    tag: "Cloud Storage",
     description:
-      "An AI-powered code tracing and repository intelligence system for GitHub developers. Includes a full survey and EDA pipeline for analyzing developer workflows and repository patterns.",
-    tech: ["Python", "AI/LLM", "EDA"],
-    icon: "M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4",
-  },
-  {
-    title: "QuizArena",
-    tag: "Networking",
-    description:
-      "Multiplayer CLI-based trivia battle system using TCP, UDP, and HTTP networking built in Java with OOP design and OpenTDB API integration.",
-    tech: ["Java", "TCP/UDP", "OpenTDB"],
-    icon: "M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4",
-  },
-  {
-    title: "Armoniait.com",
-    tag: "Web",
-    description:
-      "Company website built with modern web technologies — clean corporate presence with a professional brand experience.",
-    tech: ["React", "Tailwind CSS"],
-    screenshot: "/projects/armoniait.png",
-    link: "https://armoniait.com",
+      "A Google Drive-style cloud file storage and sharing platform built with Next.js and Tailwind CSS. Users upload files and share them through unique links with Supabase Auth and Storage.",
+    tech: ["Next.js", "Supabase", "Tailwind CSS", "Vercel"],
+    screenshot: "/projects/boxedlinks.png",
+    link: "https://boxed-links.vercel.app/",
   },
   {
     title: "Tuon.net",
-    tag: "EdTech",
+    tag: "EdTech AI",
     description:
-      "AI-powered study platform delivering intelligent learning experiences with adaptive content and smart recommendations.",
-    tech: ["React", "AI/LLM", "Supabase"],
+      "Adaptive learning platform that converts study materials into generative AI-powered quizzes with real-time personalized recommendations.",
+    tech: ["React", "AI/LLM", "Supabase", "Node.js"],
     screenshot: "/projects/tuon.png",
     link: "https://tuon.net",
   },
   {
-    title: "Maribago Grill",
-    tag: "Restaurant",
+    title: "QuizArena",
+    tag: "Networking & Java",
     description:
-      "Full restaurant platform with online menu, ordering, and reservation features deployed on Vercel.",
+      "Multiplayer CLI-based trivia battle system using TCP, UDP, and HTTP networking built in Java with OOP design and OpenTDB API integration.",
+    tech: ["Java", "TCP/UDP", "OOP", "OpenTDB"],
+    icon: "M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4",
+  },
+  {
+    title: "Armoniait.com",
+    tag: "Corporate Web",
+    description:
+      "Corporate company website engineered with clean, reusable front-end components and fully responsive layouts.",
+    tech: ["React", "Tailwind CSS", "Vercel"],
+    screenshot: "/projects/armoniait.png",
+    link: "https://armoniait.com",
+  },
+  {
+    title: "Maribago Grill",
+    tag: "Business Web",
+    description:
+      "Website proposal for a Lapu-Lapu City restaurant featuring digital interactive menus, inquiry workflows, and mobile-optimized pages.",
     tech: ["React", "Vite", "Vercel"],
     screenshot: "/projects/maribago-grill.png",
     link: "https://maribago-grill.vercel.app/",
+  },
+  {
+    title: "BackTrack",
+    tag: "Research & AI",
+    description:
+      "AI-powered code tracing and repository intelligence system for developers, featuring EDA pipeline and workflow analytics.",
+    tech: ["Python", "AI/LLM", "Data Analysis"],
+    icon: "M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4",
   },
 ];
 
