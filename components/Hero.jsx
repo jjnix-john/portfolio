@@ -55,8 +55,11 @@ export default function Hero() {
                 <span className="rounded border-2 border-border bg-surface px-3 py-1 text-xs font-bold uppercase tracking-wider text-text shadow-[2px_2px_0px_var(--border-color)]">
                   🎓 BSIT @ UCLM
                 </span>
+                <span className="rounded border-2 border-border bg-neo-yellow px-3 py-1 text-xs font-black uppercase tracking-wider text-black shadow-[2px_2px_0px_var(--border-color)]">
+                  🏆 ICS x IBM Bobathon Champion
+                </span>
                 <span className="rounded border-2 border-border bg-surface px-3 py-1 text-xs font-bold uppercase tracking-wider text-text shadow-[2px_2px_0px_var(--border-color)]">
-                  🏆 IBM-Coached Finalist
+                  ⚡ IBM-Coached Finalist
                 </span>
               </div>
             </div>
@@ -138,6 +141,7 @@ export default function Hero() {
                   <div className="text-muted">$ check_status --verbose</div>
                   <div className="bg-surface-secondary/70 p-2.5 rounded border border-dashed border-border text-[11px] space-y-1">
                     <p className="text-neo-green font-bold">● Status: Active & Available for Roles</p>
+                    <p className="text-neo-yellow font-bold">● Champion: ICS x IBM Bobathon 2026</p>
                     <p className="text-text">● Co-Engineer: Tuon.net (AI Study App)</p>
                     <p className="text-text">● Latest Deploy: BoxedLinks (Cloud Sharing)</p>
                   </div>
@@ -176,16 +180,17 @@ export default function Hero() {
                       <p className="text-text"><span className="text-neo-yellow font-bold">LANGS:</span> JS, Java, C++, Python, PHP, SQL, C</p>
                       <p className="text-text"><span className="text-neo-teal font-bold">WEB:</span> React, Next.js, Node.js, Tailwind CSS</p>
                       <p className="text-text"><span className="text-neo-orange font-bold">DATA:</span> Supabase, PostgreSQL, REST APIs</p>
-                      <p className="text-text"><span className="text-neo-lilac font-bold">TOOLS:</span> Git/GitHub, Vercel, Selenium, Claude</p>
+                      <p className="text-text"><span className="text-neo-lilac font-bold">TOOLS:</span> IBM Bob, Claude Code, Antigravity, Git, Vercel</p>
                     </div>
                   )}
 
                   {activeTab === "awards" && (
                     <div className="bg-surface-secondary/70 p-2.5 rounded border border-dashed border-border text-[11px] space-y-1.5 animate-fade-in">
-                      <p className="text-neo-yellow font-bold">★ Finalist, IBPAP Hackathon (IBM-Coached)</p>
-                      <p className="text-neo-orange font-bold">★ 3rd Place, CCS Days Hackathon 2025</p>
-                      <p className="text-neo-teal font-bold">★ TOPCIT Level 2 ICT Certified</p>
-                      <p className="text-neo-green font-bold">★ EF SET C1 Advanced English Certificate</p>
+                      <p className="text-neo-yellow font-bold">🏆 Champion, ICS x IBM Bobathon 2026</p>
+                      <p className="text-neo-orange font-bold">★ Finalist, IBPAP Hackathon (IBM-Coached)</p>
+                      <p className="text-neo-teal font-bold">★ 3rd Place, CCS Days & 4th Place, ICT Congress</p>
+                      <p className="text-neo-lilac font-bold">★ 3x IBM SkillsBuild (IBM Bob) Certified</p>
+                      <p className="text-neo-green font-bold">★ TOPCIT Level 2 & EF SET C1 Certified</p>
                     </div>
                   )}
 
@@ -235,10 +240,10 @@ export default function Hero() {
         {/* Stats Row with Neubrutalist Cards */}
         <div className="mt-16 grid grid-cols-2 gap-4 md:grid-cols-4 animate-fade-up stagger-5">
           {[
-            { label: "Projects Built", value: "10+", color: "text-neo-orange" },
+            { label: "ICS x IBM Bobathon", value: "Champion '26", color: "text-neo-yellow" },
             { label: "Core Languages", value: "Java / C++ / Python", color: "text-neo-teal" },
-            { label: "Hackathon Finalist", value: "IBM-Coached", color: "text-neo-lilac" },
-            { label: "ICT Certified", value: "TOPCIT L2", color: "text-neo-green" },
+            { label: "IBPAP Hackathon", value: "IBM Finalist", color: "text-neo-lilac" },
+            { label: "Certifications", value: "TOPCIT L2 & IBM", color: "text-neo-green" },
           ].map((stat, i) => (
             <div
               key={i}

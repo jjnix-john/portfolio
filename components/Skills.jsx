@@ -49,13 +49,14 @@ const skillGroups = [
     badge: "Production Ready",
     color: "border-neo-green bg-neo-green/10 text-neo-green",
     tags: [
+      "Generative AI & LLM APIs",
+      "IBM Bob",
+      "Claude Code & Antigravity",
       "Git & GitHub",
       "Vercel Deployment",
       "Selenium Automation",
-      "Generative AI & LLM APIs",
       "VS Code & Linux CLI",
-      "Postman",
-      "Claude Code & Antigravity",
+      "Agile & Technical Docs",
     ],
   },
 ];

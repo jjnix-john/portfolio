@@ -73,10 +73,11 @@ function isRelatedToJohn(query) {
     "python", "php", "javascript", "typescript", "js", "ts", "react", "next", "next.js",
     "node", "node.js", "supabase", "tailwind", "css", "html", "sql", "postgres", "mysql",
     "database", "api", "apis", "rest", "tcp", "udp", "socket", "network", "networking",
-    "selenium", "git", "github", "vercel", "ai", "llm", "claude", "antigravity", "tools",
+    "selenium", "git", "github", "vercel", "ai", "llm", "claude", "antigravity", "ibm bob", "bob", "tools",
     // Education & Achievements
     "education", "school", "college", "university", "uclm", "cebu", "degree", "bsit",
-    "award", "awards", "hackathon", "ibpap", "ibm", "ccs days", "topcit", "ef set",
+    "award", "awards", "achievement", "achievements", "champion", "bobathon", "ics",
+    "hackathon", "ibpap", "ibm", "ccs days", "ict congress", "skillsbuild", "topcit", "ef set",
     "cert", "certificate", "certification", "certifications", "english", "c1",
     // Career & Contact
     "experience", "work", "job", "hire", "hiring", "available", "role", "full stack",
@@ -150,7 +151,7 @@ function generateAnswer(query) {
 
   // Tech Stack & Skills in general
   if (q.includes("skill") || q.includes("stack") || q.includes("tech") || q.includes("framework") || q.includes("tool")) {
-    return "🛠️ **John Elton Geromo's Job-Ready Tech Stack**:\n\n• **Languages**: JavaScript (ES6+), TypeScript, Java, C++, Python, PHP, SQL, HTML5/CSS3, C\n• **Frontend**: React, Next.js (App Router), Tailwind CSS, Neubrutalism UI\n• **Backend & DB**: Node.js, Express, Supabase (Auth & Storage), PostgreSQL, MySQL, REST APIs, TCP/UDP sockets\n• **Tools & Platforms**: Git, GitHub, Vercel, Selenium, Postman, Linux CLI, Claude Code, Antigravity\n• **Practices**: Full-Stack Architecture, Agile/Scrum, Software Design Patterns, Technical Documentation.";
+    return "🛠️ **John Elton Geromo's Job-Ready Tech Stack**:\n\n• **Languages**: JavaScript (ES6+), TypeScript, Java, C++, Python, PHP, SQL, HTML5/CSS3, C\n• **Frontend**: React, Next.js (App Router), Tailwind CSS, Neubrutalism UI\n• **Backend & DB**: Node.js, Express, Supabase (Auth & Storage), PostgreSQL, MySQL, REST APIs, TCP/UDP sockets\n• **AI & Tooling**: Generative AI Integration, IBM Bob, Claude Code, Antigravity, Git, GitHub, Vercel, Selenium, VS Code\n• **Practices**: Responsive Web Design, Software Architecture, Agile Development, Technical Documentation.";
   }
 
   // Experience / Jobs
@@ -164,13 +165,25 @@ function generateAnswer(query) {
   }
 
   // Certifications & Awards
-  if (q.includes("cert") || q.includes("award") || q.includes("hackathon") || q.includes("ibm") || q.includes("topcit") || q.includes("ef set")) {
-    return "🏆 **Awards & Certifications**:\n\n• **IBPAP Hackathon Finalist** (\"Can You Hack It?\"): 1 of 20 competing schools nationwide, directly coached and mentored by IBM engineers (Aug 2026).\n• **3rd Place, CCS Days Hackathon 2025**: University of Cebu - UCLM.\n• **TOPCIT Level 2 Certified**: Test of Practical Competency in ICT.\n• **EF SET English Certificate C1 (Advanced)**: Certified high proficiency in global technical collaboration.";
+  if (
+    q.includes("cert") ||
+    q.includes("award") ||
+    q.includes("achievement") ||
+    q.includes("champion") ||
+    q.includes("bobathon") ||
+    q.includes("bob") ||
+    q.includes("skillsbuild") ||
+    q.includes("hackathon") ||
+    q.includes("ibm") ||
+    q.includes("topcit") ||
+    q.includes("ef set")
+  ) {
+    return "🏆 **Awards & Achievements**:\n\n• **Champion, ICS x IBM Bobathon** (Nov 2026)\n• **Finalist, IBPAP Hackathon \"Can You Hack It?\"** (Aug 2026 — 1 of 20 schools, coached by IBM engineers)\n• **3rd Place, CCS Days Hackathon 2025** (University of Cebu - UCLM)\n• **4th Place, ICT Congress Hackathon 2026**\n\n📜 **Certifications**:\n• **Build with IBM Bob: From Ideas to Intelligent Solutions** (IBM SkillsBuild | Nov 2026)\n• **How IBM Bob and AI Tools Are Changing the Way Solutions Are Built** (IBM SkillsBuild | Nov 2026)\n• **Planning a Website for a Small Business with IBM Bob** (IBM SkillsBuild | Nov 2026)\n• **TOPCIT Level 2 Certified** (Test of Practical Competency in ICT)\n• **EF SET English Certificate, C1 (Advanced)**";
   }
 
   // Hiring / Availability
   if (q.includes("hire") || q.includes("available") || q.includes("role") || q.includes("looking") || q.includes("open to")) {
-    return "🚀 **Availability for Hire**:\n\n**Yes, John is actively seeking a Full Stack or Front-End Developer role!**\n\n• **Best fit**: Full Stack Engineer (React/Next.js + Node/Supabase/Java), Front-End Developer, or Software Engineer.\n• **Strengths**: Fast learner, hackathon proven (IBM-coached), solid foundations in web stacks and systems languages.\n• **Get in touch**: [johneltongeromo438@gmail.com](mailto:johneltongeromo438@gmail.com) | +63 993 302 3621";
+    return "🚀 **Availability for Hire**:\n\n**Yes, John is actively seeking a Full Stack or Front-End Developer role!**\n\n• **Best fit**: Full Stack Engineer (React/Next.js + Node/Supabase/Java), Front-End Developer, or Software Engineer.\n• **Strengths**: Fast learner, **ICS x IBM Bobathon Champion 2026**, IBM-coached hackathon finalist, solid foundations in web stacks and systems languages.\n• **Get in touch**: [johneltongeromo438@gmail.com](mailto:johneltongeromo438@gmail.com) | +63 993 302 3621";
   }
 
   // Resume / CV
@@ -179,7 +192,7 @@ function generateAnswer(query) {
   }
 
   // Default fallback about John
-  return "**John Elton Geromo** is a Full Stack Developer & BSIT student in Mandaue City, Philippines. He builds high-performance web applications using React, Next.js, Node.js, and Supabase, with strong backend programming in Java, C++, Python, and PHP.\n\nKey Highlights:\n• Built **BoxedLinks** (Google Drive-style cloud storage)\n• Co-Engineer at **Tuon.net** (AI Study App)\n• **IBPAP Hackathon Finalist** (Coached by IBM Engineers)\n• **TOPCIT Level 2** & **EF SET C1** certified";
+  return "**John Elton Geromo** is a Full Stack Developer & BSIT student in Mandaue City, Philippines. He builds high-performance web applications using React, Next.js, Node.js, Tailwind CSS, and Supabase, with strong backend programming in Java, C++, Python, PHP, and C.\n\nKey Highlights:\n• 🏆 **Champion, ICS x IBM Bobathon 2026**\n• Built **BoxedLinks** (Google Drive-style cloud storage)\n• Co-Engineer at **Tuon.net** (AI Study App)\n• **IBPAP Hackathon Finalist** (Coached by IBM Engineers)\n• **3x IBM SkillsBuild (IBM Bob)**, **TOPCIT Level 2** & **EF SET C1** certified";
 }
 
 export default function ChatBot() {
