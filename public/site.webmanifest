@@ -1,0 +1,16 @@
+{
+  "name": "John Elton Geromo | Full Stack Developer Portfolio",
+  "short_name": "John Elton Geromo",
+  "description": "Official portfolio of John Elton Geromo — Full Stack Developer, ICS x IBM Bobathon 2026 Champion, and Co-Engineer at Tuon.net.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0E",
+  "theme_color": "#0A0A0E",
+  "icons": [
+    {
+      "src": "/files/PictureUpload.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

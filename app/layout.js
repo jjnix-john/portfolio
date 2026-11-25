@@ -13,9 +13,71 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "John Elton Geromo | Portfolio",
+  metadataBase: new URL("https://portfolio-sigma-ten-43.vercel.app"),
+  title: {
+    default: "John Elton Geromo | Full Stack Developer & Software Engineer",
+    template: "%s | John Elton Geromo",
+  },
   description:
-    "Student & Full Stack Developer — building modern web apps, automation tools, and exploring AI/software systems.",
+    "Official portfolio of John Elton Geromo (John Elton D. Geromo), Full Stack Developer and BSIT student at UCLM in Mandaue City, Cebu, Philippines. ICS x IBM Bobathon 2026 Champion, IBPAP Hackathon Finalist, and Co-Engineer at Tuon.net.",
+  keywords: [
+    "John Elton Geromo",
+    "John Elton D. Geromo",
+    "John Elton",
+    "Elton Geromo",
+    "Full Stack Developer Philippines",
+    "Full Stack Developer Cebu",
+    "Software Engineer Mandaue City",
+    "ICS x IBM Bobathon Champion",
+    "Tuon.net",
+    "BoxedLinks",
+    "React Developer",
+    "Next.js Developer",
+    "Supabase",
+    "UCLM BSIT",
+    "jjnix-john",
+  ],
+  authors: [{ name: "John Elton Geromo", url: "https://portfolio-sigma-ten-43.vercel.app" }],
+  creator: "John Elton Geromo",
+  publisher: "John Elton Geromo",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://portfolio-sigma-ten-43.vercel.app/",
+    siteName: "John Elton Geromo Portfolio",
+    title: "John Elton Geromo | Full Stack Developer & ICS x IBM Bobathon Champion",
+    description:
+      "Explore the projects, achievements, and skills of John Elton Geromo — Full Stack Developer specializing in React, Next.js, Node.js, Supabase, Java, Python, and AI integration.",
+    images: [
+      {
+        url: "/files/PictureUpload.png",
+        width: 800,
+        height: 800,
+        alt: "John Elton Geromo - Full Stack Developer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "John Elton Geromo | Full Stack Developer & Software Engineer",
+    description:
+      "Full Stack Developer in Cebu, Philippines. ICS x IBM Bobathon 2026 Champion, Co-Engineer at Tuon.net, and builder of BoxedLinks.",
+    images: ["/files/PictureUpload.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({ children }) {

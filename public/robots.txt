@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-sigma-ten-43.vercel.app/sitemap.xml
